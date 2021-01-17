@@ -1,0 +1,40 @@
+try this: https://code.visualstudio.com/docs/cpp/config-mingw, Configuring the C++ extension in Visual Studio Code to target g++ and gdb on a Mingw-w64 installation https://code.visualstudio.com/opengraphimg/opengraph-docs.png
+Anyone having language doubts for now you can continue with Python, but also learn some C++ side by side.
+Completely you can never learn a language 100% .. everything is relative. Basic constructs can be learnt in a month ig. You can get familiar with the syntax in 3-4 days then you will learn more as you will continue using it and google according to you requirement,it helps alot in remembering stuff
+In 3rd sem, there'd be this course ADP.It covers html,css,js,nodejs,mongodb,php,sql.But most of these are easy enough, so people already start learning and using them beforehand.The hackathons generally serve best to not only learn but start implementing them as well.
+Since the Data Science courses require Python, so, you'll have to learn it irrespective of your choice of PL for CP. Knowing python, java,cpp is not a pre requisite to get started with html js etc.
+There are several good resources online for learning python like geeksforgeeks,codecademy and many more.One can always look at youtube tutorials for better understanding or take help from online blogs.Apart from this there are several good books for the people not comfortable learning stuff online.
+All languages are good but java and cpp are preferred for competitive programming due to fast compilation than python whereas python is preferred for machine learning due to a large number of built in libraries.
+Both python and C++ are popular languages and one should have knowledge of both.But for CP learn C++ and for machine learning,go for python.
+Competitive programming is a sport.You have to solve a problem with code that is fast,consumes the minimum amount of memory,and is often practically unreadable.
+Any laptop with intel core i5 and above should be fine.Get at least 8GB of RAM and try to get one with an SSD rather than HDD for faster file transfers and computation.
+Both OS are good but go with windows because most of the students dual boot their laptops with linux which is easier in windows and most of the seniors have windows laptops so they can guide you better for problems related to windows.
+Refer to the comment on this post by our previous coordinator Vipul Sharma https://www.facebook.com/groups/1719088524914102/permalink/1753671191455835/
+Google Summer of Code is a global program focused on bringing more student developers into open source software development.Students work with an open source organization on a 10 week programming project during their break from school.
+Refer to this fabulous article on medium.com for beginners https://medium.com/swlh/how-to-start-coding-a-practical-guide-for-beginners-updated-2020-ff06e59bb56e
+For instructions on how to dual boot refer to this blog written by our ex-coordinator Dheeraj Yadav http://blog.pc.iitmandi.co.in/Dual-Boot/
+There  are several resources online to learn C++ like gfg, youtube tutorials and e-books to help you get going and if stuck anywhere,you can always consult your seniors or mentors.Practice is the key to perfection,so code as much as you can on online platforms like URI online judge for beginners.
+For beginners,CodeBlocks is a good IDE and one needs to install a cpp compiler like MinGW separately with it.For competitive and DSA,text editors like Sublime text and VSCode are good enough.
+Refer this link for downloading VSCode and MinGW compiler https://code.visualstudio.com/docs/cpp/config-mingw . For codeblocks, Refer https://www3.ntu.edu.sg/home/ehchua/programming/howto/CodeBlocks_HowTo.html
+Spyder IDE is one of the best IDEs for python programming. Downloading it with Anaconda is preferred to get all the necessary packages at once and for other useful applications.For downloading spyder with Anaconda refer https://www.anaconda.com/products/individual 
+For downloading spyder with Anaconda,which is preferred to get all the necessary packages at once and for other useful applications,refer https://www.anaconda.com/products/individual 
+One can enroll in paid courses if he/she is not comfortable with youtube tutorials but otherwise the latter should be fine as long as one is referring to other good resources as well.
+Programming club is only to help,learning is your own responsibility.Start learning on your own and ask anytime for help whenever stuck.PC conducts several events which can help you test your skills and improve your weak areas.
+The sooner, the better. Start now and become a pro in second year XD
+If you are comfortable with the basics of any one programming language, start with basic data structures and algorithms from any online resource like gfg or youtube tutorials.Code more and more problems to gain confidence.
+Depends on the person but be regular and code regularly.
+Refer to this article to gain an insight of git and github https://www.howtogeek.com/180167/htg-explains-what-is-github-and-what-do-geeks-use-it-for/
+Completely you can never learn a language 100%, everything is relative. Basic constructs can be learnt in a month.
+In 3rd sem, there'd be this course ADP.It covers html,css,js,nodejs,mongodb,php,sql.But most of these are easy enough, so people already start learning and using them beforehand.The hackathons generally serve best to not only learn but start implementing them as well.
+No, companies only look at your skills.If you have done some good certification e.g.in networks  ccna by cisco or something similar to that then that is of some value.
+int main() is the standard defined.void main() was never defined as a standard when C++ was created.
+You can simply include then using `#include <library name>`.
+g++ main.cpp -o main    ./main(in next line)
+Switching to C++ would be suggested along with practising on Codeforces.
+Try changing the DNS server.
+There can be multiple reasons for a run time error. Google the error code to see the specific issue.
+Discord bots can be written in any major language.
+Select IIT Mandi as your institute.Email need not necessarily be an institute's.
+Android may be based on Linux, but it’s not based on the type of Linux system you may have used on your PC. You can’t run Android apps on typical Linux distributions and you can’t run the Linux programs you’re familiar with on Android.
+https://github.com/deepanshu1422/List-Of-Open-Source-Internships-Programs
+https://www.udemy.com/course/react-js-basics-to-advanced/?couponCode=FREEDEC

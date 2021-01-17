@@ -1,0 +1,40 @@
+How to install g++ correctly for VS Code?
+I started learning c++, should I discontinue it and learn python first??
+In how much time we can learn a language, like python??
+will we be taught js later on?
+if i am already a little accustomed with python java and little c++, should i start with html and js?
+From where can I learn Python?
+Which is better, C++ or Python or Java?
+Should I continue Python or shift to C++?
+What is competitive Programming?
+Which laptop should I buy?
+Should I buy macbook or consider windows?
+How is coding culture at IIT Mandi?
+What is GSoC?
+How to start programming if I don’t know anything about it?
+How to dual boot ubuntu?
+Which resources can help me to start with C++?
+Which software is required for C++?
+How can I download softwares required for C++?
+Which software is required for Python?
+How can I download softwares required for Python?
+Should I enroll in some paid course or youtube is enough?
+Should I wait for the Programming club or should I start learning coding on my own?
+Can I start programming in second year, or should I start in first year itself?
+I already know the basics of programming, which resources can help me further?
+How much time should I devote to programming?
+What is Github?
+In how much time we can learn a language, like python?
+will we be taught javascript later on?
+The certificates these online paid courses provide,are they of any use?
+What is the use of return 0,why can't we just use void main in C++?
+Can anyone explain how to import libraries in VS Code C++?
+How to run C++ code in terminal?
+Please guide me about competitive programming, currently I am doing java.Should I switch to some other language?
+Do different service providers in India have their own different list of blocked websites or it is same for all in India (setup by TRAI)?
+While solving problems at hackerrank I'm have run-time error can somebody suggest how to correct this?
+What language do discord bots use?
+On the uri judge challenge  website do we need to use IIT Mandi email or is any other ID to join fine ?
+I never understood  how Android is a linux?
+List of GSoC like open-source programmes?
+How to start with React.js?
