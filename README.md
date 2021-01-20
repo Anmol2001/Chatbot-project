@@ -5,12 +5,14 @@ This repository contains the implementation of the chatbot project by ALPHA Team
 * Intent Classifier        
 * Voice input
 * Emoji output on chit chat
+* Use /random to get a random fact about IIT Mandi.
 * Answers a variety of college queries like clubs,hostels,academics,placement stats,food and campus.
 * Answers basic programming queries for freshers and can do chit chat conversation.
 # How to deploy:
 * Clone the github repository
 * Unzip the word_embeddings.tar.xz
 * Install all the libraries from the requirements.txt
+* Download and extract word embeddings for stackoverflow posts from [here](https://drive.google.com/file/d/1pdyRC1qRnw1PEIlI4inMRxyh48XkYvj2/view?usp=sharing)
 * Download and extract  Google news pre-trained vectors from [here](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit)
 * Run the stackoverBot-train.ipynb .
 * Run train_notebook.ipynb for both campus dataset and programming dataset.
