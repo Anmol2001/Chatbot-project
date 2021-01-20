@@ -21,7 +21,7 @@ The program selects the closest matching response by searching for the closest m
 
 # Input
 Here input can be text or audio. For text, it gets processed and passed through the model to give an appropriate answer according to the question. If the input is audio, it gets uploaded to ibm's cloud and uses ibm's watson speech to text model, and processed as text further.
-The Speech to Text service converts the human voice into the written word. The service uses deep-learning AI to apply knowledge of grammar, language structure, and the composition of audio and voice signals to accurately transcribe human speech. It can be used in applications such as voice-automated chatbots, analytic tools for customer-service call centers, and multi-media transcription, among many others.
+The IBM watson Speech to Text converts the human voice into the written word. The service uses deep-learning AI to apply knowledge of grammar, language structure, and the composition of audio and voice signals to accurately transcribe human speech. It can be used in applications such as voice-automated chatbots, analytic tools for customer-service call centers, and multi-media transcription, among many others.
 
 # Text Preprocessing
 To use the text on models it is necessary to preprocess it to remove the unnecessary things.Firstly we remove the special characters which are not relevant for us except '/' and '-'. Secondly we remove the stop words like [ ‘is’, ‘s’, ‘am’, ‘or’, ‘who’, ‘as’, ‘from’] which are not related to context of the sentence. Then our foucus goes on Lemmatization which changes the word into its base form like various forms of word into its simple form and plural forms into singular form. Now the data is ready to go for training.
