@@ -7,6 +7,19 @@ This repository contains the implementation of the chatbot project by ALPHA Team
 * Emoji output on chit chat
 * Answers a variety of college queries like clubs,hostels,academics,placement stats,food and campus.
 * Answers basic programming queries for freshers and can do chit chat conversation.
+# How to deploy:
+* Clone the github repository
+* Unzip the word_embeddings.tar.xz
+* Install all the libraries from the requirements.txt
+* Download and extract  Google news pre-trained vectors from [here](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit)
+* Run the stackoverBot-train.ipynb .
+* Run train_notebook.ipynb for both campus dataset and programming dataset.
+* Run intent_back_end.py.
+* Download glove.6B.50d.txt from  [here](https://drive.google.com/file/d/13VddkMYxcqrkpuaWqXX_YRjFmZ-15PSA/view) and save it in the data folder.
+* Run emojify.py to train the emojifer model
+* Add your api key and url key for ibm’s watson for voice recognition
+* Run main_bot.py to make the bot live
+
 
 # Intent Recogniser
 The main concept used here is **TF-IDF Vectorization**. It means Term frequency and Inverse Document Frequency Vectorization. First of all it builds a vocabulary from the training data. As a final result we have to get vocabulary vector for each sentence which gives weight of each word of vocabulary in a sentence For calculating the formula is:
