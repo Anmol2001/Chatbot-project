@@ -13,10 +13,16 @@ import nltk
 from nltk.corpus import stopwords
 import gensim
 from sklearn.metrics.pairwise import cosine_similarity
-
+from nltk.stem.wordnet import WordNetLemmatizer
+import spacy
 import warnings
 warnings.simplefilter('ignore')
 
+nlp=spacy.load("en",disable=["parser","ner"])
+lem=WordNetLemmatizer
+
+word2vec_pickle_path =  'programming_queries_word2vec_' + '.bin'
+model = gensim.models.KeyedVectors.load(word2vec_pickle_path)
 
 class Retrieval:
     def __init__(self,flag):
@@ -40,27 +46,25 @@ class Retrieval:
                                       'Average_Pooling': list(data_language['Average_Pooling'])})
         """
         # Read word2vec model
-        word2vec_pickle_path =  'programming_queries_word2vec_' + '.bin'
-        model = gensim.models.KeyedVectors.load(word2vec_pickle_path)
 
         #self.GREETING_INPUTS = GREETING_INPUTS
         #self.GREETING_RESPONSES = GREETING_RESPONSES
         self.flag = flag
         self.model = model
 
-    def pre_process(self, facts):
+    def pre_process(self,facts):
         stop_words = stopwords.words("english")
         # Tokenlization
         facts=[x.lower() for x in facts]
         facts = [re.sub('[/(){}\[\]\|@,;]', ' ', x) for x in facts]
         facts = [re.sub('[^0-9a-z #+_]', '', x) for x in facts]
-    
+
         facts_tokens = [nltk.word_tokenize(t) for t in facts]
         # Removing Stop Words
-        facts_stop = [[t for t in tokens if (t not in stop_words) and (2 <= len(t.strip()) < 25)]
-                      for tokens in facts_tokens]
-        facts_stop = pd.Series(facts_stop)
-        return facts_stop
+        facts_stop = [[t for t in tokens if (t not in stop_words) and (2 <= len(t.strip()) < 25)] for tokens in facts_tokens]
+        facts_lem=[[t.lemma_ for t in nlp(" ".join(tokens)) if t.text!="-PRON-"] for tokens in facts_stop]
+        facts_lem=pd.Series(facts_lem)
+        return facts_lem
 
     def preprocessing_data(self):
 

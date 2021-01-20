@@ -3,10 +3,10 @@ import pickle
 import re
 import numpy as np
 import csv
-
+import spacy
 nltk.download('stopwords')
 from nltk.corpus import stopwords
-
+nlp=spacy.load("en",disable=["parser","ner"])
 # Paths for all resources for the bot.
 RESOURCE_PATH = {
     'INTENT_RECOGNIZER1': 'intent_recognizer1.pkl',
@@ -16,6 +16,7 @@ RESOURCE_PATH = {
     'WORD_EMBEDDINGS': 'word_embeddings.tsv',
     'INTENT_RECOGNIZER2': 'intent_recognizer2.pkl',
     'TFIDF_VECTORIZER2': 'tfidf_vectorizer2.pkl',
+    'TFIDF_VECTORIZER': 'tfidf_vectorizer.pkl'
 }
 
 
@@ -30,9 +31,22 @@ def text_prepare(text):
     text = replace_by_space_re.sub(' ', text)
     text = bad_symbols_re.sub('', text)
     text = ' '.join([x for x in text.split() if x and x not in stopwords_set])
-
+    doc=nlp(text)
+    text=" ".join([token.lemma_ for token in doc if token.text!="-PRON-"])
     return text.strip()
 
+def text_prepare2(text):
+    """Performs tokenization and simple preprocessing."""
+    
+    replace_by_space_re = re.compile('[/(){}\[\]\|@,;]')
+    bad_symbols_re = re.compile('[^0-9a-z #+_]')
+    stopwords_set = set(stopwords.words('english'))
+    text=str(text)
+    text = text.lower()
+    text = replace_by_space_re.sub(' ', text)
+    text = bad_symbols_re.sub('', text)
+    text = ' '.join([x for x in text.split() if x and x not in stopwords_set])
+    return text.strip()
 
 def load_embeddings(embeddings_path):
     """Loads pre-trained word embeddings from tsv file.

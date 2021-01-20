@@ -7,13 +7,23 @@ from utils import *
 import college_retrieval
 import programming_retrieval 
 from chatterbot.trainers import ChatterBotCorpusTrainer
+from keras.models import load_model
+import numpy as np
+from emo_utils import *
+import random
+import emojifyer
+
+
 
 #add data.txt if needed in filenames
+model = load_model('data/my_model.h5')
+word_to_index, index_to_word, word_to_vec_map = read_glove_vecs('data/glove.6B.50d.txt')
+
 
 filenames=["data.txt"]
 files={}       
 for filename in filenames:     
-    with open("dataset/"+filename, 'r', encoding='utf-8') as f:
+    with open("data/"+filename, 'r', encoding='utf-8') as f:
         files[filename]= f.read().split('\n')
         files[filename] = [re.sub(r"\[\w+\]",'hi',line) for line in files[filename]]
         files[filename]= [" ".join(re.findall(r"\w+",line)) for line in files[filename]]
@@ -46,19 +56,22 @@ class ThreadRanker(object):
             Y=thread_embeddings,
             metric='cosine'
         ))
-        print(best_thread_similarity)
-        if best_thread_similarity>=0.45: 
-            return f'I think its about {tag_name}\n This thread might help you: https://stackoverflow.com/questions/{thread_ids[best_thread][0]}'
+        #print(best_thread_similarity)
+        reply=self.programming.Main(question)
+        if reply != "Please refer kammand prompt discord or ask you mentor for more info :)":
+            return reply
         else:
-            reply=self.programming.Main(question)
-            return reply 
+            if best_thread_similarity>=0.45: 
+                return f'I think its about {tag_name}\n This thread might help you: https://stackoverflow.com/questions/{thread_ids[best_thread][0]}'
+            else:
+                return "Please refer to kammand prompt discord or ask for your mentee" 
 class DialogueManager(object):
     def __init__(self, paths):
         print("Loading resources...")
 
         # Intent recognition:
         self.intent_recognizer = IntentManager(paths)
-        self.tfidf_vectorizer = unpickle_file(paths['TFIDF_VECTORIZER1'])
+        self.tfidf_vectorizer = unpickle_file(paths['TFIDF_VECTORIZER'])
 
         self.ANSWER_TEMPLATE = 'I think its about %s\n This thread might help you: https://stackoverflow.com/questions/%s'
 
@@ -77,9 +90,9 @@ class DialogueManager(object):
         self.chatbot.trainer2=ListTrainer(self.chatbot)
         self.chatbot.trainer=ChatterBotCorpusTrainer(self.chatbot)
         self.chatbot.trainer.train("chatterbot.corpus.english.greetings")
-        self.chatbot.trainer.train("chatterbot.corpus.english.conversations")
-      #  for filename in filenames:    
-       #     self.chatbot.trainer2.train(files[filename])
+        #self.chatbot.trainer.train("chatterbot.corpus.english.conversations")
+        for filename in filenames:    
+            self.chatbot.trainer2.train(files[filename])
 
 
     def generate_answer(self, question):
@@ -94,18 +107,26 @@ class DialogueManager(object):
         #intent='gcs'
         # Chit-chat part:   
         if intent == 'dialogue':
+            """
             # Pass question to chitchat_bot to generate a response.
             reply=self.college.Main(question)
             if reply !="Please refer GCS facebook page or ask you mentor for more info :)":
                 return reply
             else:   
-                response = self.chatbot.get_response(prepared_question)
-                return response
+            """
+            response = str(self.chatbot.get_response(prepared_question))
+            temp=np.random.choice(2,p=[0.5,0.5])
+            times=np.random.choice([1,2,3,4],p=[0.5,0.3,0.1,0.1])
+            if temp==0:
+                print("EMOJI!!!!!")
+                response= response + times*(label_to_emoji(emojifyer.predict_emoji(model,response,word_to_index)).strip())
+            return response
         elif intent=="mandi":
             reply=self.college.Main(question)
             return reply
         # Goal-oriented part:
-        else:
+        elif intent=="stackoverflow":
             tag = self.tag_classifier.predict(features)[0]
             reply = self.thread_ranker.get_best_thread(prepared_question, tag)
             return reply
+        
