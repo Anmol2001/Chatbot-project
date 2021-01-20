@@ -64,7 +64,7 @@ class ThreadRanker(object):
             if best_thread_similarity>=0.45: 
                 return f'I think its about {tag_name}\n This thread might help you: https://stackoverflow.com/questions/{thread_ids[best_thread][0]}'
             else:
-                return "Please refer to kammand prompt discord or ask for your mentee" 
+                return "Please refer to kammand prompt discord or ask for your mentor" 
 class DialogueManager(object):
     def __init__(self, paths):
         print("Loading resources...")
@@ -82,7 +82,7 @@ class DialogueManager(object):
         # Chit-chat part
         self.create_chitchat_bot()
         self.college=college_retrieval.Retrieval('college')
-
+        self.programming=programming_retrieval.Retrieval('college')
     def create_chitchat_bot(self):
         """Initializes self.chitchat_bot with some conversational model."""
         
@@ -114,13 +114,21 @@ class DialogueManager(object):
                 return reply
             else:   
             """
-            response = str(self.chatbot.get_response(prepared_question))
-            temp=np.random.choice(2,p=[0.5,0.5])
-            times=np.random.choice([1,2,3,4],p=[0.5,0.3,0.1,0.1])
-            if temp==0:
-                print("EMOJI!!!!!")
-                response= response + times*(label_to_emoji(emojifyer.predict_emoji(model,response,word_to_index)).strip())
-            return response
+            reply=self.college.Main(question)
+            if reply!="Please refer GCS facebook page or ask you mentor for more info :)":
+                return reply
+            else:
+                reply=self.programming.Main(question)
+                if reply!="Please refer kammand prompt discord or ask you mentor for more info :)":
+                    return reply
+                else:
+                    response = str(self.chatbot.get_response(prepared_question))
+                    temp=np.random.choice(2,p=[0.5,0.5])
+                    times=np.random.choice([1,2,3,4],p=[0.5,0.3,0.1,0.1])
+                    if temp==0:
+                        print("EMOJI!!!!!")
+                        response= response + times*(label_to_emoji(emojifyer.predict_emoji(model,response,word_to_index)).strip())
+                    return response
         elif intent=="mandi":
             reply=self.college.Main(question)
             return reply
