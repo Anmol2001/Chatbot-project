@@ -38,3 +38,13 @@ Select IIT Mandi as your institute.Email need not necessarily be an institute's.
 Android may be based on Linux, but it’s not based on the type of Linux system you may have used on your PC. You can’t run Android apps on typical Linux distributions and you can’t run the Linux programs you’re familiar with on Android.
 https://github.com/deepanshu1422/List-Of-Open-Source-Internships-Programs
 https://www.udemy.com/course/react-js-basics-to-advanced/?couponCode=FREEDEC
+try this: https://code.visualstudio.com/docs/cpp/config-mingw , Configuring the C++ extension in Visual Studio Code to target g++ and gdb on a Mingw-w64 installation  https://code.visualstudio.com/opengraphimg/opengraph-docs.png
+Anyone having language doubts for now you can continue with Python, but also learn some C++ side by side.
+You can never learn a language completely but  Basic constructs can be learnt in about a month while you  get familiar with the syntax in 3-4 days. Solve good questions and learn from net according to the requirement of the questions.
+In 3rd sem, there is a course called ADP.It covers html,css,js,nodejs,mongodb,php,sql.But many of these are easy enough, so people  start learning and using them beforehand.The hackathons generally serve best to not only learn but to start implementing them as well.
+Since the Data Science courses require Python, so, you'll have to learn it irrespective of your choice of language for CP. Knowing python, java,cpp is not a pre requisite to get started with html js etc.
+A person’s programming skills have got nothing to do with his branch if that person tries hard enough.
+You must try solving questions with easier difficulty and check out for concepts online if you are getting stuck at the same type of problems.
+You can always check out online for a better explanation or try asking in the official programming group of IIT Mandi on platforms like discord and whatsapp.
+Yes, there are regular workshops and a good number of competitions to increase your knowledge , infact I too am a result of a chatbot competition.
+1, Achievements in Inter IIT Tech Meet 2019		 Gold Medal in Coding Hackathon by Aashish Kumar, Chirag Vashisht , Milind Topno and Vipul Sharma		Bronze Medal in Route Optimization Algorithm by Akash Dakoor , Palak Gupta , Shreyas Bapat.         Bronze Medal in the Data Science Challenge event.			2, Achievements in GSoC 	5 Students Selections and 2 Mentor Selections in GSoC 2019, Students - Dheeraj Yadav, Prajjwal Jha, Gaurav Kumar, Sharad Shukla, Vipul Sharma and Mentors- Abhigyan Khaund, Chirag Vashisht.For more info visit- https://pc.iitmandi.co.in.
