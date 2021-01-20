@@ -2,8 +2,6 @@
 This repository contains the implementation of the chatbot project by ALPHA Team under a competition conducted by Programming Club IIT Mandi. The flowchart below will give you a brief insight and layout of the project.
 ![FLOWCHART](Flowchart%20of%20Project.png)
 
-# Text Preprocessing
-To use the text on models it is necessary to preprocess it to remove the unnecessary things.Firstly we remove the special characters which are not relevant for us except '/' and '-'. Secondly we remove the stop words like [ ‘is’, ‘s’, ‘am’, ‘or’, ‘who’, ‘as’, ‘from’] which are not related to context of the sentence. Then our foucus goes on Lemmatization which changes the word into its base form like various forms of word into its simple form and plural forms into singular form. Now the data is ready to go for training.
 # Intent Recogniser
 The main concept used here is **TF-IDF Vectorization**. It means Term frequency and Inverse Document Frequency Vectorization. First of all it builds a vocabulary from the training data. As a final result we have to get vocabulary vector for each sentence which gives weight of each word of vocabulary in a sentence For calculating the formula is:
                     `Tf-Idf= Tf * Idf ; where Idf= log(|D|/1+{d:t in d}) `
