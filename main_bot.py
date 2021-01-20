@@ -4,21 +4,30 @@ import requests
 import time
 import argparse
 import os
+from os import path
 import json
 from utils import *
 from dialogue_manager import DialogueManager
 import spacy
 import random
 from requests.compat import urljoin
-import speech_recognition as sr
-#import audiodownloader
+import emoji
+import re
+import voice_recognition
 
-r = sr.Recognizer()
+def deEmojify(text):
+    regrex_pattern = re.compile(pattern = "["
+        u"\U0001F600-\U0001F64F"
+        u"\U0001F300-\U0001F5FF"
+        u"\U0001F680-\U0001F6FF"
+        u"\U0001F1E0-\U0001F1FF"
+                           "]+", flags = re.UNICODE)
+    return regrex_pattern.sub(r'',text)
 
-with open("campus_answers.txt","r",encoding="utf-8") as f:
+
+
+with open("data/campus_answers.txt","r",encoding="utf-8") as f:
         answers= f.read().split('\n')
-        answers= [re.sub(r"\[\w+\]",'hi',line) for line in answers]
-        answers= [" ".join(re.findall(r"\w+",line)) for line in answers]
 class BotHandler(object):
     """
         BotHandler is a class which implements all back-end of the bot.
@@ -53,14 +62,14 @@ class BotHandler(object):
     def get_answer(self, question):
         if question == '/start':
             return "Hi there, How can I help you today?"
-        elif question == "/random fact":
+        elif question == "/random":
             return random.choice(answers)
         """elif question.lower()=="what is pmc" or question.lower()== "what is pmc?":
             return "Photography and Moviemaking Club (PMC) is the official photography and videography club of IIT Mandi. It is one of the most prominent and influential clubs of the cultural society. It conducts several events, workshops and sessions all year round. It has brought numerous laurels to the institute. For more info visit https://wiki.iitmandi.co.in/p/Photography_and_Moviemaking_Club"
         """
-        reply21=self.dialogue_manager.generate_answer(question)
-        print(reply21)
-        return reply21
+        reply=self.dialogue_manager.generate_answer(question)
+        print(reply)
+        return reply
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -69,18 +78,8 @@ def parse_args():
 
 
 def is_unicode(text):
-    return len(text) == len(text.encode())
+    return len(text) == len(text.encode("utf-8"))
 
-
-class SimpleDialogueManager(object):
-    """
-    This is the simplest dialogue manager to test the telegram bot.
-    Your task is to create a more advanced one in dialogue_manager.py."
-    """
-    
-    def generate_answer(self, question): 
-        return "Hello, world!" 
-        
 
 def main():
     token = '1547700302:AAERs9g0D40N-VvW0TIh5jvJc1EujMjC8nc'
@@ -109,31 +108,23 @@ def main():
                 chat_id = update["message"]["chat"]["id"]
                 if "text" in update["message"]:
                     text = update["message"]["text"]
+                    text=text.encode('ascii', 'ignore').decode('ascii')
                     if is_unicode(text):
                         print("Update content: {}".format(update))
-                        bot.send_message(chat_id, bot.get_answer(update["message"]["text"]))
-                        
+                        bot.send_message(chat_id, bot.get_answer(text))
                     else:
                         bot.send_message(chat_id, "Hmm, you are sending some weird characters to me...")
-            """
-            if "message" in update:
-                chat_id = update["message"]["chat"]["id"]
-                flag=0
                 if "voice" in update["message"]:
-                    audio=audiodownloader.get(update["message"],token,chat_id)
-                    audio=r.record(audio)
-                    try:
-                        text=r.recognize_sphinx(audio)
-                        print(text)
-                    except sr.UnknownValueError:
-                        flag=1
-                        bot.send_message("could not understand audio") 
-                    if is_unicode(text) and flag==0:
-                        print("Update content: {}".format(update))
-                        bot.send_message(chat_id, bot.get_answer(text))
-            """
+                    file_id=update["message"]["voice"]["file_id"]
+                    text=voice_recognition.get(update["message"],token)
+                    print(f"Did u said '{text}'")
+                    bot.send_message(chat_id, f"Did u said '{text}'")
+                    print("Update content: {}".format(update))
+                    bot.send_message(chat_id, bot.get_answer(text))
+            
             offset = max(offset, update['update_id'] + 1)
         time.sleep(1)
 
 if __name__ == "__main__":
     main()
+ 

@@ -97,12 +97,12 @@ Physical education and sports section, IIT Mandi, coordinates all the sports act
 Hiking and Trekking Club(HnT) is an adventure club which helps students explore the beauty of the Himalayas by conducting treks to various places in and outside of Himachal Pradesh. This is a growing club and at present has hundreds of members. The club provides a platform for adventure enthusiasts to experience the untouched beauty of Himachal Pradesh. This club is comprised of students, faculty and the institute staff. The club occasionally also conducts cleanliness drives at the places it visits. For more info visit https://wiki.iitmandi.co.in/p/Hiking_and_Trekking_Club
 Hiking and Trekking Club(HnT) is an adventure club which helps students explore the beauty of the Himalayas by conducting treks to various places in and outside of Himachal Pradesh. This is a growing club and at present has hundreds of members. The club provides a platform for adventure enthusiasts to experience the untouched beauty of Himachal Pradesh. This club is comprised of students, faculty and the institute staff. The club occasionally also conducts cleanliness drives at the places it visits. For more info visit https://wiki.iitmandi.co.in/p/Hiking_and_Trekking_Club
 New students can choose to be a part of the club in their first semester. Coordinators of the club are choosen by the members of the club through an election process. Coordinators choose the core team of the club based on previous participation and interviews. The core team of the club is subdivided into teams that manage different areas. For more info visit https://wiki.iitmandi.co.in/p/Hiking_and_Trekking_Club
-There are good number of the hotels in the Mandi in various ranges suitable for all.Some hotels provide dinning facility but some not.There are some good restaurants and some hygienic dhabhas also.
-Mess is good and hygienic. You will be provided breakfast, lunch, a light meal in evening and dinner.The food is tasty and lots of variety is given daily.The timing of the mess is according to schedule.The menu is decided by hostel mess Secretary which is chosen by you among selves.
+There are good number of the hotels in the Mandi in various ranges suitable for all.Some hotels provide dinning facility but some not.There are some good restaurants and some hygienic dhabhas also.
+Mess is good and hygienic. You will be provided breakfast, lunch, a light meal in evening and dinner.The food is tasty and lots of variety is given daily.The timing of the mess is according to schedule.The menu is decided by hostel mess Secretary which is chosen by you among selves.
 The breakfast consist of dosa,various types of parathas with curd and butter, bread omlete, bread jam, alloo puri, pohaa etc
 In lunch you will be provided daal, curd, rayta, rice, manchurian, non-veg(chicken), egg curry, paneer, chole bature, curry and other stuff.
 The light meal in the evening consist of the samosas, french fries, shakes, pakore, chowmin etc.Tea is served in both breakfast and supper. Sometimes milk is also served in the breakfast.
-The timing of the mess is according to schedule.The menu is decided by hostel mess Secretary which is chosen by you among selves.
+The timing of the mess is according to schedule.The menu is decided by hostel mess Secretary which is chosen by you among selves.
 On the IIT-Mandi campus, students, faculty and staff eat their main meals at one of two mess halls in each campus. In south campus there are Cedar Mess (D1) and Maple Mess (D2), and in the north campus there are oak mess and pine mess.
 There are canteens, which are like food stalls, and food counter. The counter is in the D1 mess where u can find sandwiches, dumplings, and various desserts.There are serveral canteens in both the campuses. One bite is in north campus with a variety of things to eat.
 D2 Mess has a canteen underneath the main eating area where many students go for omelettes, sandwiches, and late night desserts. In addition there are two more canteens at other locations on campus that serve a variety of foods including fried chicken, eggs, noodles, pizzas, burgers, shakes and a lot of traditional Indian cuisines also.
@@ -163,8 +163,31 @@ Semester exchange offered by IIT Mandi allows students to take one or two semest
 Semester exchange limits to condition that visit will not be allowed during the final (normally eighth) semester and some of the signature courses of IIT Mandi such as Reverse Engineering, Design Practicum, ISTP, and any others( that are notified from time to time) must be completed at IIT Mandi.
 The students are required to do an industrial internship in India for a minimum period of 6 weeks, during the winter vacation following the 5th semester or any subsequent vacation before the final semester and the internship must be done in a technology oriented public/private sector company/industry or in reputed research organizations, such as CSIR, DRDO or BARC. 
 Courses remain same for every branch for the first year which include Electrical systems around us, Computing and Data Science, Mathematics, Reverse Engineering, Graphics for Design, English, German, Applied electronics, Engineering Thermodynamics, etc .
-Ubuntu is a Linux-based operating system. It is designed for computers, smartphones, and network servers. The system is developed by a UK based company called Canonical Ltd. All the principles used to develop the Ubuntu software are based on the principles of Open Source software development.
-There is no requirement to use ubuntu, but it is preffered to use Ubuntu/Mac-os over Windows because they are linux-based os and is more flexible than windows.Thats why most of the companies ask their employees to use these operatin systems.
-Yes u can dual-boot Ubuntu and windows on a same machine. Here is a link https://www.tecmint.com/install-ubuntu-alongside-with-windows-dual-boot/ and if u still have any problem or doubt u can ask it in Kammand Propmt https://www.facebook.com/groups/KamandPrompt/?multi_permalinks=1707713859401575
-Here is a link https://www.tecmint.com/install-ubuntu-alongside-with-windows-dual-boot/ and if u still have any problem or doubt u can ask it from any memeber of Kammand Propmt https://www.facebook.com/groups/KamandPrompt/?multi_permalinks=1707713859401575
-Check this documentation for Ubuntu https://ubuntu.com/tutorials/ and if u want to learn the basic linux commands visit https://ubuntu.com/tutorials/command-line-for-beginners#1-overview/
+NSO stands for National Sports organization in which students enroll themselves in different sports and attend their practice sessions regularly.
+NSS stands for National service scheme in which students make their contribution to various social causes.It basically involves trips to various social organisations where students make their valuable contributions for the betterment of the society.
+H&T is hiking and trekking club which organises treks to various peaks in the hilly state of himachal pradesh.
+All students admitted to the B.Tech. program will have to take either NSO or NSS or H&T as a non-credit extra-curricular program.The NSO/NSS/H&T requirement should be completed within the first two semesters of the program.
+No, there is no grading for NSO/NSS/H&T, but these are compulsory.
+All students admitted to the B.Tech. program will have to take either NSO or NSS or H&T as a non-credit extra-curricular program.
+As there are no tests/exams for these programs, the attendance requirement is 90%.
+If the absence is on valid grounds, the deficiency shall be made up through extra sessions.If the absence is unauthorized, the deficiency will have to be made up during the following year.The deficiency in NSO/NSS/H&T sessions will have to be made up at the rate of two classes for each class missed.
+The NSO/NSS/H&T requirement should be completed within the first two semesters of the program.
+There is no exam for NSO/NSS/H&T.
+No, these are part of the B.Tech Course Curriculum and there is no separate fees.
+In terms of space , IIT Mandi hostels are as good as they get. The hostel rooms are spacious and meet international standards.
+Depending on the size of the room 2 to 3 people might be accommodated in it.
+Double or Triple rooms are given to First Yearites to promote interaction with batchmates.
+The hostels are at a walking distance from the academic buildings
+The hostels in IIT Mandi have Water Coolers, Kettles, Fridge, Induction Stoves,heaters, geysers, washing machines , and Vending Machines.Table Tennis and Foosball tables are also present in the hostels.
+It is advised to mark attendance by 12 o clock everyday.
+Yes, for this purpose an induction stove and kettle is provided.
+Yes , a formal request can be made by the student.
+Yes, a formal request can be made by the student.
+The campus is at a considerable distance from town hence these services are not available.Nonetheless dominoes and Onebite do deliver food.
+Table Tennis and Foosball tables are also present in the hostels.
+Yes, a request can be made for room heaters.
+Yes, students need to mark attendance everyday.
+No , due to less amount of floors, there is no need of lifts in hostels.
+Students are advised to pack sweatshirts, sweaters,jackets and blankets . 
+Yes , there are plenty of geysers in every bathroom.
+Washing machines are present in every hostel eliminating the need for laundry services.
