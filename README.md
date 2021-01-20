@@ -14,3 +14,9 @@ The first step of every model involves Text preprocessing. The main concept used
 # Text Preprocessing
 To use the text on models it is necessary to preprocess it to remove the unnecessary things.Firstly we remove the special characters which are not relevant for us except '/' and '-'. Secondly we remove the stop words like [ ‘is’, ‘s’, ‘am’, ‘or’, ‘who’, ‘as’, ‘from’] which are not related to context of the sentence. Then our foucus goes on Lemmatization which changes the word into its base form like various forms of word into its simple form and plural forms into singular form. Now the data is ready to go for training.
 
+# General Conversation Response
+![banner](https://user-images.githubusercontent.com/63630653/105210321-e74d4e00-5b70-11eb-9370-3ceb19f701fb.png)
+Once we are sure that the question at hand pertains to general conversation rather than a fixed topic , we can used an approach more suited for the task at hand.
+For this task we have used the ChatterBot library . The chatter library works by finding a known statement closest to the input. It then returns the known response of the selected match. It generates a pair of such responses and then gives the response with highest confidence as the output.The library also saves the text that they entered and the text that the statement was in response to hence learning from it's users.
+
+
