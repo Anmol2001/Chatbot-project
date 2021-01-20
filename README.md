@@ -1,6 +1,12 @@
 # Chatbot-project
 This repository contains the implementation of the chatbot project by ALPHA Team under a competition conducted by Programming Club IIT Mandi. The flowchart below will give you a brief insight and layout of the project.
 ![FLOWCHART](Flowchart%20of%20Project.png)
+# Key Features 
+* Intent Classifier        
+* Voice input
+* Emoji output on chit chat
+* Answers a variety of college queries like clubs,hostels,academics,placement stats,food and campus.
+* Answers basic programming queries for freshers and can do chit chat conversation.
 
 # Intent Recogniser
 The main concept used here is **TF-IDF Vectorization**. It means Term frequency and Inverse Document Frequency Vectorization. First of all it builds a vocabulary from the training data. As a final result we have to get vocabulary vector for each sentence which gives weight of each word of vocabulary in a sentence For calculating the formula is:
