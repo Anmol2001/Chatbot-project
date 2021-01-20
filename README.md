@@ -11,12 +11,14 @@ Now we are prepared to take an input and classify into the requred three categor
 # Retrieval based model using Word2vec
 The first step of every model involves Text preprocessing. The main concept used in Retrieval based model is **Word2Vec**. Word2Vec involves transforming each word into a 100-300 dimensional feature vector.The architecture of Word2vec model comprised of a CBOW Continuous Bag of Words model which predicts the current word from a window of surrounding words. It uses negative sampling method that minimizes the log-likelihood of the sampled negative sentences in training. It is obvious that such a model will require a large corpus to train. So For training ,i have used `Google news pretrained word vectors` and intersected its vocabulary with my own model on queries dataset. So that most of the words in my model will have decent vectors and then i have further trained the model on some epochs to update the vectors after vocabulary intersection. Now the words in the model will have their vector representations and **similar words will have similar vector representations**. So when user will enter a question the word vectors which are in the vocabulary(we had another option for words not in volcabulary we could have checked that word from google news vectors but it is a large file to be used while running a model) will be averaged in the sentence to get a single vector representation of that sentence. And the questions in the dataset are also averages over words in a sentence to get a single mean vector for that sentence. Now we will match cosine similarity of the   question vector with all question in the specific dataset (with programming questions for programming query and college question for college query). If the highest similarity is greater than a threshold then we will return the answer other wise a specific message is given as output for that specific type(already detected by intent classifier) of query.
 
+# Chatterbot 
+ChatterBot is a Python library designed to make it easy to create software that can engage in conversation.
+
+An untrained instance of ChatterBot starts off with no knowledge of how to communicate. Each time a user enters a statement, the library saves the text that they entered and the text that the statement was in response to. As ChatterBot receives more input the number of responses that it can reply and the accuracy of each response in relation to the input statement increase.
+
+The program selects the closest matching response by searching for the closest matching known statement that matches the input, it then chooses a response from the selection of known responses to that statement.
+![chatterbot-flowchart](chatterbot-process-flow.svg)
+
 # Text Preprocessing
 To use the text on models it is necessary to preprocess it to remove the unnecessary things.Firstly we remove the special characters which are not relevant for us except '/' and '-'. Secondly we remove the stop words like [ ‘is’, ‘s’, ‘am’, ‘or’, ‘who’, ‘as’, ‘from’] which are not related to context of the sentence. Then our foucus goes on Lemmatization which changes the word into its base form like various forms of word into its simple form and plural forms into singular form. Now the data is ready to go for training.
-
-# General Conversation Response
-![banner](https://user-images.githubusercontent.com/63630653/105210321-e74d4e00-5b70-11eb-9370-3ceb19f701fb.png)
-Once we are sure that the question at hand pertains to general conversation rather than a fixed topic , we can used an approach more suited for the task at hand.
-For this task we have used the ChatterBot library . The chatter library works by finding a known statement closest to the input. It then returns the known response of the selected match. It generates a pair of such responses and then gives the response with highest confidence as the output.The library also saves the text that they entered and the text that the statement was in response to hence learning from it's users.
-
 
