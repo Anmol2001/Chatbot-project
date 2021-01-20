@@ -38,3 +38,13 @@ On the uri judge challenge  website do we need to use IIT Mandi email or is any 
 I never understood  how Android is a linux?
 List of GSoC like open-source programmes?
 How to start with React.js?
+How to install g++ correctly for vs code?
+I started learning c++, should I discontinue it and learn python first??
+In how much time we can learn a language, like python??
+will we be taught js later on?
+If I am already a little accustomed with python java and little c++, should i start with html and js?
+I am not from any computer science related branch , do I have any chance to be in league with other programming students ?
+What should I do if I am not able to solve questions on programming?
+Where should i look for help if i am having trouble in understanding a programming concept?
+Are there any workshops and competitions that will help in becoming a better programmer?
+What are some achievements of programming club kamand prompt?
