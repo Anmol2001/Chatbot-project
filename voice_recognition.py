@@ -29,10 +29,10 @@ def get(message,token):
     print(audiofile)
     os.remove(src_filename)
   
-    authenticator = IAMAuthenticator('SLS0RjKOdzK2gXnz3Q7J_F4DK1HUWcz9w5kw66cDoeAq')  
+    authenticator = IAMAuthenticator('ADD YOUR API KEY HERE')  
     service = SpeechToTextV1(authenticator = authenticator) 
 
-    service.set_service_url('https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/1c459761-585c-499a-a07f-5738f7479ae9') 
+    service.set_service_url('ADD YOUR API URL HERE') 
 
     with open((audiofile),'rb') as audio_file: 
         
