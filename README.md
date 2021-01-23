@@ -1,5 +1,5 @@
 # Chatbot-project
-This repository contains the implementation of the chatbot project by ALPHA Team under a competition conducted by Programming Club IIT Mandi. The flowchart below will give you a brief insight and layout of the project.
+This repository contains the implementation of the chatbot project by ALPHA Team under a competition conducted by Programming Club IIT Mandi. The flowchart below will give you a brief insight and layout of the project. You can talk with the bot [here](http://t.me/stck0bot)
 ![FLOWCHART](Flowchart%20of%20Project.png)
 # Key Features 
 * Intent Classifier        
