@@ -54,13 +54,13 @@ class Retrieval:
         self.model = model
     def pre_process(self,facts):
         stop_words = stopwords.words("english")
-        # Tokenlization
+        # Tokenization
         facts=[x.lower() for x in facts]
         facts = [re.sub('[/(){}\[\]\|@,;]', ' ', x) for x in facts]
         facts = [re.sub('[^0-9a-z #+_]', '', x) for x in facts]
         
         facts_tokens = [nltk.word_tokenize(t) for t in facts]
-        # Removing Stop Words
+        #removing stop words
         facts_stop = [[t for t in tokens if (t not in stop_words) and (2 <= len(t.strip()) < 25)]
                         for tokens in facts_tokens]
         facts_lem=[[t.lemma_ for t in nlp(" ".join(tokens)) if t.text!="-PRON-"] for tokens in facts_stop]

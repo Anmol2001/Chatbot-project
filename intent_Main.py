@@ -21,7 +21,6 @@ class IntentManager(object):
         intent =   self.intent_recognizer2.predict(features)[0]
         return intent
     def Main(self,chat):
-        #intent_manager = IntentManager(RESOURCE_PATH)
         if self.answer(chat) != "dialogue":
             return self.answer(chat)
         else:

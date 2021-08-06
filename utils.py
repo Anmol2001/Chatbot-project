@@ -72,7 +72,7 @@ def load_embeddings(embeddings_path):
     return embeddings,dim
 
 def question_to_vec(question, embeddings, dim):
-    """Transforms a string to an embedding by averaging word embeddings."""
+    #Transforms a string to an embedding by averaging word embeddings
     
     word_embedding=[embeddings[word] for word in question.split() if word in embeddings]
     if not word_embedding:
@@ -81,6 +81,6 @@ def question_to_vec(question, embeddings, dim):
     return np.mean(words_embeddings,axis=0)
     
 def unpickle_file(filename):
-    """Returns the result of unpickling the file content."""
+    #Returns the result of unpickling the file content."""
     with open(filename, 'rb') as f:
         return pickle.load(f)
